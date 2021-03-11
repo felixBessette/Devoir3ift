@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context=".profile_section.Profile">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="348dp"
+        android:layout_height="537dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/etudiant2"
+            android:textAlignment="center"
+            android:textColor="@color/text_blue"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="92dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/location"
+            android:textColor="@color/text_blue"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.014"
+            app:layout_constraintStart_toEndOf="@+id/imageView11"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="41dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="44dp"
+            android:contentDescription="@string/accept"
+            android:src="@drawable/ic_baseline_location_on_24"
+            app:layout_constraintBottom_toTopOf="@+id/personnaliser"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView5"
+            app:layout_constraintVertical_bias="0.266" />
+
+        <Button
+            android:id="@+id/param"
+            android:layout_width="248dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_baseline_settings_24"
+            android:drawableTint="@color/black"
+            android:text="@string/param"
+            android:textAlignment="viewStart"
+            android:textColor="@color/text_blue"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.44"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact" />
+
+        <Button
+            android:id="@+id/contact"
+            android:layout_width="253dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_baseline_people_24"
+            android:drawableTint="@color/black"
+            android:text="@string/contact"
+            android:textAlignment="viewStart"
+            android:textColor="@color/text_blue"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.41"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personnaliser" />
+
+        <Button
+            android:id="@+id/personnaliser"
+            android:layout_width="249dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="44dp"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_baseline_edit_24"
+            android:drawableTint="@color/black"
+            android:text="@string/personnaliser"
+            android:textAlignment="viewStart"
+            android:textColor="@color/text_blue"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.434"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="218dp"
+            android:layout_height="173dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/avatar9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

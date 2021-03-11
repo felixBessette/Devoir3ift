@@ -1,0 +1,155 @@
+<resources>
+    <string name="app_name">Devoir3</string>
+    <string name="title_activity_navigation">MainActivity</string>
+    <string name="title_home">Recherche</string>
+    <string name="title_dashboard">Saved</string>
+    <string name="title_notifications">Messages</string>
+
+
+    <string name="authentif">Authentification</string>
+    <string name="courriel">Courriel</string>
+    <string name="motdepasse">Mot de passe</string>
+    <string name="connecter">Se connecter</string>
+    <string name="mdp_oublier">Mot de Passe Oublié?</string>
+    <string name="enregistrer">S\'enregistrer?</string>
+
+    <string name="create">Créer un Compte</string>
+    <string name="confirm">Confirmer</string>
+    <string name="inscrire">S\'inscrire</string>
+    <string name="retour">Retour</string>
+    <string name="entrer_adresse">Entrez votre adresse courriel</string>
+    <string name="mdp_temporaire">Mot de passe temporaire</string>
+
+    <string name="retrouver">Retrouver vos collègues par :</string>
+    <string name="interet">Intérêt</string>
+    <string name="cours">Cours</string>
+    <string name="club">Club</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="personnaliser">Personnaliser</string>
+    <string name="contact">Contacts</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+
+    <string name="info">Information personnelle</string>
+    <string name="notif">Notifications</string>
+    <string name="liste">Liste</string>
+    <string name="fav">Favoris</string>
+    <string name="param">Paramètres</string>
+
+    <string name="profile">Profile</string>
+
+    <string name="rech_message">Message</string>
+    <string name="apropos">Cours :</string>
+    <string name="cours_pris">Clubs :</string>
+    <string name="add_friend">Demande d\'ami</string>
+    <string name="club_participe">Intérêts :</string>
+
+    <string name="etudiant1">Nom1</string>
+    <string name="etudiant2">Nom2</string>
+    <string name="etudiant3">Nom3</string>
+    <string name="etudiant4">Nom4</string>
+    <string name="etudiant5">Nom5</string>
+    <string name="location">Université de Montréal</string>
+
+
+    <string name="aime1">J\'aime l\'info</string>
+    <string name="aime2">J\'aime les maths</string>
+    <string name="send_message">Envoyer un message</string>
+    <string name="partage">Partager</string>
+    <string name="fb">Facebook</string>
+    <string name="tw">Twitter</string>
+    <string name="ig">Instagram</string>
+    <string name="liste_critere">Voici la liste des étudiants répondant aux critères sélectionnés</string>
+    <string name="choisir_avat">Choisissez un nouvel avatar :</string>
+    <string name="liste_fav">Voici la liste des étudiants en favoris</string>
+
+
+    <string name="donnees">Données du profil</string>
+    <string name="demande">Demande d\'ami de </string>
+    <string name="securite">Sécurité</string>
+    <string name="accept">Accepter</string>
+    <string name="local">Localisation</string>
+    <string-array name="student_interet">
+        <item>J\'aime les maths</item>
+        <item>J\aime l\'info</item>
+        <item>J\'aime les maths</item>
+        <item>J\'aime l\'info</item>
+        <item>J\'aime les maths</item>
+        <item>J\'aime l\'info</item>
+        <item>J\'aime les maths</item>
+        <item>J\'aime l\'info</item>
+        <item>J\'aime les maths</item>
+    </string-array>
+
+    <string-array name="student_cours">
+        <item>IFT2905</item>
+        <item>IFT2245</item>
+        <item>IFT2945</item>
+        <item>IFT2015</item>
+        <item>IFT2145</item>
+        <item>IFT1575</item>
+        <item>MATH1600</item>
+        <item>BIO1000</item>
+        <item>PSY1001</item>
+    </string-array>
+    <string-array name="student_clubs">
+        <item>Échec</item>
+        <item>Génie en herbe</item>
+        <item>Administration</item>
+        <item>Hacking</item>
+        <item>Natation</item>
+        <item>Sport extérieur</item>
+        <item>Bénévolat</item>
+        <item>Camping</item>
+        <item>Environnement</item>
+    </string-array>
+
+    <string-array name="student_name">
+        <item>Fred</item>
+        <item>Gab</item>
+        <item>Charly</item>
+        <item>Alex</item>
+        <item>Jo</item>
+        <item>Adri</item>
+        <item>Jas</item>
+        <item>Nath</item>
+        <item>Eli</item>
+    </string-array>
+
+
+    <string-array name="convo1">
+        <item>Merci à toi aussi</item>
+        <item>Merci!</item>
+        <item>J\'étais malade</item>
+        <item>Es tu allé au cours</item>
+        <item>Je dois étudier</item>
+        <item>rien et toi?</item>
+        <item>oui</item>
+        <item>ça va?</item>
+        <item>Salut</item>
+    </string-array>
+
+    <string-array name="convo2">
+        <item>Merci</item>
+        <item>Derien, bonne soirée</item>
+        <item>Je vais t\'envoyer mes notes</item>
+        <item>Oui et toi</item>
+        <item>OK</item>
+        <item>Rien, veux tu aller au resto</item>
+        <item>Que fais tu?</item>
+        <item>Oui et toi?</item>
+        <item>Salut</item>
+    </string-array>
+
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="grismoyen">#D0D0D0</color>
+    <color name="grispale">#F0F0F0</color>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

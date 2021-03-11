@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_recherche">
+
+    <fragment
+        android:id="@+id/navigation_recherche"
+        android:name="com.example.devoir3.recherche_section.Recherche"
+        android:label="@string/rech_message"
+        tools:layout="@layout/recherche">
+        <action
+            android:id="@+id/action_navigation_recherche_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_saved"
+        android:name="com.example.devoir3.favori_section.Favori"
+        tools:layout="@layout/favori" >
+        <action
+            android:id="@+id/action_navigation_saved_to_viewProfileFragment"
+            app:destination="@id/viewProfileFragment" />
+        <argument
+            android:name="info"
+            app:argType="string[]" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_messages"
+        android:name="com.example.devoir3.messages_section.Messages"
+        tools:layout="@layout/messages" >
+        <action
+            android:id="@+id/action_navigation_messages_to_conversation"
+            app:destination="@id/conversation" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.devoir3.recherche_section.ResultRecherche"
+        tools:layout="@layout/search_result">
+        <argument
+            android:name="message"
+            app:argType="string"
+            android:defaultValue="default" />
+        <action
+            android:id="@+id/action_resultFragment_to_viewProfileFragment"
+            app:destination="@id/viewProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewProfileFragment"
+        android:name="com.example.devoir3.ViewProfile"
+        android:label="fragment_view_profile"
+        tools:layout="@layout/view_profile" >
+        <argument
+            android:name="info"
+            app:argType="string[]" />
+        <action
+            android:id="@+id/action_viewProfileFragment_to_conversation"
+            app:destination="@id/conversation" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_notif"
+        android:name="com.example.devoir3.notif_section.Notif"
+        tools:layout="@layout/notif">
+        <action
+            android:id="@+id/action_navigation_notif_to_viewProfileFragment"
+            app:destination="@id/viewProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profil"
+        android:name="com.example.devoir3.profile_section.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/profile" >
+        <action
+            android:id="@+id/action_navigation_profil_to_personnaliserProfile"
+            app:destination="@id/personnaliserProfile" />
+        <action
+            android:id="@+id/action_navigation_profil_to_contact2"
+            app:destination="@id/contact2" />
+    </fragment>
+    <fragment
+        android:id="@+id/conversation"
+        android:name="com.example.devoir3.messages_section.Conversation"
+        tools:layout="@layout/conversation" >
+        <argument
+            android:name="profileInfo"
+            app:argType="string[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/contact2"
+        android:name="com.example.devoir3.profile_section.Contact"
+        tools:layout="@layout/contact">
+        <action
+            android:id="@+id/action_contact2_to_viewProfileFragment"
+            app:destination="@id/viewProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personnaliserProfile"
+        android:name="com.example.devoir3.profile_section.PersonnaliserProfile"
+        android:label="personnaliser__profile"
+        tools:layout="@layout/personnaliser_profile" />
+</navigation>
