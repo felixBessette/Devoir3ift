@@ -42,7 +42,7 @@ public class Favori extends Fragment {
         View root = inflater.inflate(R.layout.favori, container, false);
         recyclerView = root.findViewById(R.id.favori_recycler);
         int[] ids = new int[1];
-        ids[0] = R.layout.row_contacts;
+        ids[0] = R.layout.row_favori;
         String[] profInfo = new String[3];
         LinearLayoutManager linearLayoutManager = new  LinearLayoutManager(getContext());
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
@@ -64,6 +64,7 @@ public class Favori extends Fragment {
             public void otherClicked(View v, int position) {
                 View val = linearLayoutManager.findViewByPosition(position);
                 assert val != null;
+                TextView name = val.findViewById(R.id.profile_text1);
                 ImageButton like = val.findViewById(R.id.likeButton);
                 if ((Integer)like.getTag() == Color.RED) {
                     like.setColorFilter(Color.BLACK);

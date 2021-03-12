@@ -39,7 +39,6 @@ public class Messages extends Fragment {
                         TextView name = val.findViewById(R.id.profile_text1);
                         ImageView imgView = val.findViewById(R.id.profile_img);
                         profInfo[0] = name.getText().toString();
-                        profInfo[2] = imgView.getTag().toString();
                         MessagesDirections.ActionNavigationMessagesToConversation action =
                                 MessagesDirections.actionNavigationMessagesToConversation(profInfo);
                         action.setProfileInfo(profInfo);
