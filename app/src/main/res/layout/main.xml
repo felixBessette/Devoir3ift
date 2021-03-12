@@ -5,7 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".login_section.MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue_main">
 
+        <TextView
+            android:id="@+id/Authentif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/authentif"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <TextView
         android:id="@+id/mdp"
         android:layout_width="wrap_content"
@@ -55,20 +73,6 @@
         android:text="@string/courriel"
         android:textColor="@color/text_blue"
         android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/Authentif"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="119dp"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/authentif"
-        android:textColor="@color/text_blue"
-        android:textSize="30sp" />
 
     <Button
         android:id="@+id/inscrire"

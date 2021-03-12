@@ -78,6 +78,9 @@
         <action
             android:id="@+id/action_navigation_profil_to_contact2"
             app:destination="@id/contact2" />
+        <argument
+            android:name="testarg"
+            app:argType="string[]" />
     </fragment>
     <fragment
         android:id="@+id/conversation"
@@ -100,4 +103,13 @@
         android:name="com.example.devoir3.profile_section.PersonnaliserProfile"
         android:label="personnaliser__profile"
         tools:layout="@layout/personnaliser_profile" />
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.example.devoir3.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank" >
+        <action
+            android:id="@+id/action_blankFragment_to_navigation_profil"
+            app:destination="@id/navigation_profil" />
+    </fragment>
 </navigation>

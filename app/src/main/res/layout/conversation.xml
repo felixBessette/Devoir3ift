@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".messages_section.Conversation">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/convo_recycler"
         android:layout_width="match_parent"
-        android:layout_height="430dp"
-        android:layout_below="@+id/convo_name"
+        android:layout_height="497dp"
+        android:layout_below="@id/bag"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="-1dp"
         android:layout_marginBottom="54dp" />
 
     <SearchView
@@ -40,29 +41,40 @@
         android:scaleType="fitCenter"
         android:src="@drawable/ic_baseline_send_24" />
 
-    <ImageView
-        android:id="@+id/convo_img"
-        android:layout_width="132dp"
-        android:layout_height="94dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="94dp"
-        android:layout_marginTop="63dp"
-        android:src="@drawable/avatar" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bag"
+        android:layout_width="match_parent"
+        android:layout_height="89dp"
+        android:background="@color/blue_main">
 
-    <TextView
-        android:id="@+id/convo_name"
-        android:layout_width="148dp"
-        android:layout_height="59dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="93dp"
-        android:layout_marginEnd="26dp"
-        android:layout_toEndOf="@+id/convo_img"
-        android:fontFamily="sans-serif-medium"
-        android:text="TextView"
-        android:textSize="18sp" />
+        <ImageView
+            android:id="@+id/convo_img"
+            android:layout_width="128dp"
+            android:layout_height="89dp"
+            android:layout_marginStart="100dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/avatar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.157" />
+
+        <TextView
+            android:id="@+id/convo_name"
+            android:layout_width="146dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="TextView"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/convo_img"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </RelativeLayout>
 
 

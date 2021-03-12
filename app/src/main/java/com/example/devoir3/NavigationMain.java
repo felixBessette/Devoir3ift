@@ -14,11 +14,16 @@ import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
+import java.util.ArrayList;
+
 public class NavigationMain extends AppCompatActivity {
+    public static ArrayList<StudentList.Student> studentList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.navigation);
+        StudentList s = new StudentList(getApplicationContext());
+        studentList = s.initialiseStudentList();
         BottomNavigationView navView = findViewById(R.id.nav_view);
         NavController navController = androidx.navigation.Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupWithNavController(navView, navController);
@@ -37,7 +42,7 @@ public class NavigationMain extends AppCompatActivity {
                         destination.getId() == R.id.navigation_notif ||
                         destination.getId() == R.id.navigation_recherche ||
                         destination.getId() == R.id.navigation_profil ||
-                        destination.getId() == R.id.navigation_saved ){
+                        destination.getId() == R.id.navigation_saved) {
                     back.setVisibility(View.INVISIBLE);
                 }
                 else {

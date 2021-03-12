@@ -16,11 +16,6 @@ import com.example.devoir3.ListAdapter;
 import com.example.devoir3.R;
 import com.example.devoir3.recherche_section.ResultRecherche;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Conversation#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class Conversation extends Fragment {
     RecyclerView recyclerView;
 

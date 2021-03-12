@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".notif_section.Notif">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue_main">
+
+        <TextView
+            android:id="@+id/titre"
+            android:layout_width="243dp"
+            android:layout_height="49dp"
+            android:text="@string/notif"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -21,12 +43,12 @@
         style="@android:style/Widget.Material.Light.SearchView"
         android:layout_width="wrap_content"
         android:layout_height="36dp"
+        android:layout_below="@+id/header"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="17dp"
-        android:layout_marginTop="89dp"
+        android:layout_marginTop="29dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/border"
         android:contentDescription="@string/accept" />

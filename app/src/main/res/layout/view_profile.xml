@@ -7,11 +7,35 @@
     tools:context=".ViewProfile">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue_main">
+
+        <TextView
+            android:id="@+id/titre"
+            android:layout_width="243dp"
+            android:layout_height="49dp"
+            android:text="@null"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="103dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="569dp"
+        android:layout_below="@+id/header"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
+        android:layout_marginTop="28dp"
         android:layout_marginBottom="1dp">
 
         <ImageView
@@ -26,7 +50,7 @@
             app:layout_constraintTop_toBottomOf="@+id/view_prof_name" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/view_prof_like"
             android:layout_width="49dp"
             android:layout_height="45dp"
             android:background="@android:color/transparent"
@@ -46,7 +70,7 @@
             android:text="@string/etudiant1"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="@color/purple_700"
+            android:textColor="@color/text_blue"
             android:textSize="36sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"

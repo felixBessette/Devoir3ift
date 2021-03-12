@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.devoir3.ListAdapter;
+import com.example.devoir3.NavigationMain;
 import com.example.devoir3.R;
 
 public class Notif extends Fragment {

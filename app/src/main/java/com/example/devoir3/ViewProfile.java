@@ -1,5 +1,6 @@
 package com.example.devoir3;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
@@ -53,13 +54,15 @@ public class ViewProfile extends Fragment {
                 partage = root.findViewById(R.id.partager);
         TextView name = root.findViewById(R.id.view_prof_name);
         ImageView profile_img = root.findViewById(R.id.profile_picture);
+        ImageButton like = root.findViewById(R.id.view_prof_like);
         String[] profInfo = new String[3];
         if (getArguments() != null) {
             ViewProfileArgs args = ViewProfileArgs.fromBundle(getArguments());
             String[] info = args.getInfo();
-            name.setText(info[0]);
-            profInfo[2] = info[2];
-            profile_img.setImageResource(Integer.parseInt(info[2]));
+            StudentList.Student student = NavigationMain.studentList.get(Integer.parseInt(info[0]));
+            name.setText(student.getName());
+            like.setColorFilter(Color.RED);
+            profile_img.setImageResource(student.getPic());
         }
 
         message.setOnClickListener(v -> {

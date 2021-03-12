@@ -19,7 +19,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.devoir3.ListAdapter;
+import com.example.devoir3.NavigationMain;
 import com.example.devoir3.R;
+import com.example.devoir3.StudentList;
 
 public class Favori extends Fragment {
     RecyclerView recyclerView;
@@ -51,12 +53,9 @@ public class Favori extends Fragment {
                 View val = linearLayoutManager.findViewByPosition(info);
                 assert val != null;
                 TextView name = val.findViewById(R.id.profile_text1);
-                ImageView imgView = val.findViewById(R.id.profile_img);
-                profInfo[0] = name.getText().toString();
-                profInfo[2] = imgView.getTag().toString();
+                profInfo[0] = name.getTag().toString();
                 FavoriDirections.ActionNavigationSavedToViewProfileFragment action =
                         FavoriDirections.actionNavigationSavedToViewProfileFragment(profInfo);
-                action.setInfo(profInfo);
                 action.setInfo(profInfo);
                 navController.navigate(action);
             }

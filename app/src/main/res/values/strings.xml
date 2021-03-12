@@ -38,7 +38,7 @@
     <string name="fav">Favoris</string>
     <string name="param">Paramètres</string>
 
-    <string name="profile">Profile</string>
+    <string name="profile">Profil</string>
 
     <string name="rech_message">Message</string>
     <string name="apropos">Cours :</string>
@@ -64,7 +64,7 @@
     <string name="liste_critere">Voici la liste des étudiants répondant aux critères sélectionnés</string>
     <string name="choisir_avat">Choisissez un nouvel avatar :</string>
     <string name="liste_fav">Voici la liste des étudiants en favoris</string>
-
+    <string name="rech_title">Recherche</string>
 
     <string name="donnees">Données du profil</string>
     <string name="demande">Demande d\'ami de </string>

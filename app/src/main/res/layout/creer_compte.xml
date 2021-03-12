@@ -5,6 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".login_section.CreerCompte">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue_main">
+
+        <TextView
+            android:id="@+id/Authentif"
+            android:layout_width="312dp"
+            android:layout_height="55dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/create"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.textfield.TextInputLayout
 
@@ -91,21 +111,6 @@
         android:text="@string/courriel"
         android:textColor="@color/text_blue"
         android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/Authentif"
-        android:layout_width="312dp"
-        android:layout_height="55dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="68dp"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/create"
-        android:textColor="@color/text_blue"
-        android:textSize="30sp" />
 
     <Button
         android:id="@+id/inscrire"
