@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.devoir3.ListAdapter;
@@ -68,35 +67,10 @@ public class ResultRecherche extends Fragment {
                 studentInterest = getResources().getStringArray(R.array.student_clubs);
             }
         }
-        int[] ids = new int[3];
-        ids[0] = R.layout.row_result;
-        ids[1] = R.id.likeButton;
-        ids[2] = R.id.profile_text2;
-        String[] profInfo = new String[3];
+        int ids = R.layout.row_result;
         LinearLayoutManager linearLayoutManager = new  LinearLayoutManager(getContext());
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
-        ResultRechercheDirections.ActionResultFragmentToViewProfileFragment action =
-                ResultRechercheDirections.actionResultFragmentToViewProfileFragment(profInfo);
-        ListAdapter myAdapter = new ListAdapter(inflater, ids,
-                new ListAdapter.MyAdapterListener() {
-            @Override
-            public void profileClicked(View v, int info) {
-                View val = linearLayoutManager.findViewByPosition(info);
-                assert val != null;
-                TextView name = val.findViewById(R.id.profile_text1), criteria = val.findViewById(R.id.profile_text2);
-                ImageView imgView = val.findViewById(R.id.profile_img);
-                profInfo[0] = name.getText().toString();
-                profInfo[1] = criteria.getText().toString();
-                profInfo[2] = imgView.getTag().toString();
-                action.setInfo(profInfo);
-                navController.navigate(action);
-            }
-
-            @Override
-            public void otherClicked(View v, int position) {
-
-            }
-        }, linearLayoutManager, navController);
+        ListAdapter myAdapter = new ListAdapter(inflater, ids, linearLayoutManager, navController);
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
         RecyclerView.ItemDecoration itemDecoration = new

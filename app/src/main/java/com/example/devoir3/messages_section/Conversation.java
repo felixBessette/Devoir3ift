@@ -53,19 +53,9 @@ public class Conversation extends Fragment {
             name.setText(info[0]);
             picture.setImageResource(Integer.parseInt(info[2]));
         }
-        int[] ids = new int[1];
-        ids[0] = R.layout.row_convo;
+        int ids  = R.layout.row_convo;
         ListAdapter myAdapter = new ListAdapter(inflater, ids,
-                new ListAdapter.MyAdapterListener() {
-            @Override
-            public void profileClicked(View v, int info) {
-            }
-
-            @Override
-            public void otherClicked(View v, int position) {
-
-            }
-        },linearLayoutManager ,navController);
+                linearLayoutManager ,navController);
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
         RecyclerView.ItemDecoration itemDecoration = new
