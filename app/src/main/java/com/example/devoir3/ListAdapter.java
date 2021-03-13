@@ -28,6 +28,8 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     ArrayList<Integer> studentIds;
     LinearLayoutManager manager;
     NavController navController;
+    String[] convo1;
+    String[] convo2;
 
     public ListAdapter(LayoutInflater layoutInflater, int ids,
                        LinearLayoutManager linearLayoutManager, NavController navcont) {
@@ -60,22 +62,29 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = inflater.inflate(id, parent, false);
+        convo1 = view.getResources().getStringArray(R.array.convo1);
+        convo2 = view.getResources().getStringArray(R.array.convo2);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         StudentList.Student student = NavigationMain.studentList.get(studentIds.get(position));
-        holder.profileName.setText(student.getName());
-        holder.profileName.setTag(student.getId());
-        if (id != R.layout.row_convo) {
+        String name = student.getName();
+        String interet = student.getInteret();
+        if (id == R.layout.row_convo) {
+            name = convo1[position];
+            interet = convo2[position];
+            holder.profileDescrip.setText(interet);
+        }
+        else {
             holder.profile_pic.setImageResource(student.getPic());
         }
-        if (id != R.layout.row_messages && id != R.layout.row_notif) {
-            holder.profileDescrip.setText(student.getInteret());
-        }
+        holder.profileName.setText(name);
+        holder.profileName.setTag(student.getId());
         if (id != R.layout.row_messages && id != R.layout.row_convo && id != R.layout.row_notif) {
                 holder.likeButton.setColorFilter(student.getLike());
+            holder.profileDescrip.setText(interet);
         }
     }
 
@@ -100,7 +109,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             if (id != R.layout.row_convo && id != R.layout.row_messages) {
                 likeButton = itemView.findViewById(R.id.likeButton);
                 likeButton.setOnClickListener(v -> {
-
                 });
             }
             if (id != R.layout.row_convo) {

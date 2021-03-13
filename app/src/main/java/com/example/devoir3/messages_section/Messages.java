@@ -24,7 +24,6 @@ public class Messages extends Fragment {
         View root = inflater.inflate(R.layout.messages, container, false);
         recyclerView = root.findViewById(R.id.recycler_message);
         int ids = R.layout.row_messages;
-        String[] profInfo = new String[3];
         LinearLayoutManager linearLayoutManager = new  LinearLayoutManager(getContext());
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
         ListAdapter myAdapter = new ListAdapter(inflater, ids,

@@ -63,16 +63,13 @@ public class ViewProfile extends Fragment {
             name.setText(student.getName());
             like.setColorFilter(student.getLike());
             profile_img.setImageResource(student.getPic());
+            message.setOnClickListener(v -> {
+                NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
+                ViewProfileDirections.ActionViewProfileFragmentToConversation action =
+                        ViewProfileDirections.actionViewProfileFragmentToConversation(info);
+                navController.navigate(action);
+            });
         }
-
-        message.setOnClickListener(v -> {
-            NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
-            profInfo[0] = name.getText().toString();
-            ViewProfileDirections.ActionViewProfileFragmentToConversation action =
-                    ViewProfileDirections.actionViewProfileFragmentToConversation(profInfo);
-            action.setProfileInfo(profInfo);
-            navController.navigate(action);
-        });
 
         partage.setOnClickListener(v -> {
             LayoutInflater inflater1 = (LayoutInflater) root.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -90,11 +87,12 @@ public class ViewProfile extends Fragment {
 
             //Set the location of the window on the screen
             popupWindow.showAtLocation(root, Gravity.CENTER, 400, 400);
-            ImageButton close = popupView.findViewById(R.id.close);
+            ImageButton close = popupView.findViewById(R.id.share_close);
             close.setOnClickListener(u -> {
                 popupWindow.dismiss();
             });
         });
+
         return root;
 
 

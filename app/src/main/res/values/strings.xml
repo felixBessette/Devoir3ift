@@ -147,9 +147,28 @@
         <item>oui</item>
         <item>ça va?</item>
         <item>Salut</item>
+        <item>Merci à toi aussi</item>
+        <item>Merci!</item>
+        <item>J\'étais malade</item>
+        <item>Es tu allé au cours</item>
+        <item>Je dois étudier</item>
+        <item>rien et toi?</item>
+        <item>oui</item>
+        <item>ça va?</item>
+        <item>Salut</item>
+        <item>Merci</item>
     </string-array>
 
     <string-array name="convo2">
+        <item>Merci</item>
+        <item>Merci</item>
+        <item>Derien, bonne soirée</item>
+        <item>Je vais t\'envoyer mes notes</item>
+        <item>Oui et toi</item>
+        <item>OK</item>
+        <item>Rien, veux tu aller au resto</item>
+        <item>Que fais tu?</item>
+        <item>Oui et toi?</item>
         <item>Merci</item>
         <item>Derien, bonne soirée</item>
         <item>Je vais t\'envoyer mes notes</item>

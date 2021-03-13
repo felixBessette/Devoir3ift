@@ -16,7 +16,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.devoir3.ListAdapter;
+import com.example.devoir3.NavigationMain;
 import com.example.devoir3.R;
+import com.example.devoir3.StudentList;
 import com.example.devoir3.recherche_section.ResultRecherche;
 
 public class Conversation extends Fragment {
@@ -50,8 +52,9 @@ public class Conversation extends Fragment {
         if (getArguments() != null) {
             ConversationArgs args = ConversationArgs.fromBundle(getArguments());
             String[] info = args.getProfileInfo();
-            name.setText(info[0]);
-            picture.setImageResource(Integer.parseInt(info[2]));
+            StudentList.Student student = NavigationMain.studentList.get(Integer.parseInt(info[0]));
+            name.setText(student.getName());
+            picture.setImageResource(student.getPic());
         }
         int ids  = R.layout.row_convo;
         ListAdapter myAdapter = new ListAdapter(inflater, ids,
@@ -61,6 +64,8 @@ public class Conversation extends Fragment {
         RecyclerView.ItemDecoration itemDecoration = new
                 DividerItemDecoration(root.getContext(), DividerItemDecoration.VERTICAL);
         recyclerView.addItemDecoration(itemDecoration);
+        linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(false);
         return root;
     }
 }
