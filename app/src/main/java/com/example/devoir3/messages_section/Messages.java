@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -37,8 +36,7 @@ public class Messages extends Fragment {
                         View val = linearLayoutManager.findViewByPosition(info);
                         assert val != null;
                         TextView name = val.findViewById(R.id.profile_text1);
-                        ImageView imgView = val.findViewById(R.id.profile_img);
-                        profInfo[0] = name.getText().toString();
+                        profInfo[0] = name.getTag().toString();
                         MessagesDirections.ActionNavigationMessagesToConversation action =
                                 MessagesDirections.actionNavigationMessagesToConversation(profInfo);
                         action.setProfileInfo(profInfo);
@@ -49,7 +47,7 @@ public class Messages extends Fragment {
                     public void otherClicked(View v, int position) {
 
                     }
-                });
+                }, linearLayoutManager, navController);
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
         RecyclerView.ItemDecoration itemDecoration = new

@@ -1,7 +1,6 @@
 package com.example.devoir3.favori_section;
 
 import android.graphics.Color;
-import android.graphics.ColorFilter;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -15,13 +14,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.devoir3.ListAdapter;
-import com.example.devoir3.NavigationMain;
 import com.example.devoir3.R;
-import com.example.devoir3.StudentList;
 
 public class Favori extends Fragment {
     RecyclerView recyclerView;
@@ -75,7 +71,7 @@ public class Favori extends Fragment {
                     like.setTag(Color.RED);
                 }
             }
-        });
+        }, linearLayoutManager,navController);
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
         RecyclerView.ItemDecoration itemDecoration = new

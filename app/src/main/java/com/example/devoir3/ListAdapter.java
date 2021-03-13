@@ -10,18 +10,22 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.devoir3.favori_section.FavoriDirections;
+
 import java.util.ArrayList;
-import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
-    String[] studentName, studentInterest;
     LayoutInflater inflater;
     int[] id;
     ArrayList<Integer> studentIds;
     public MyAdapterListener onClickListener;
+    LinearLayoutManager manager;
+    NavController navController;
 
     public interface MyAdapterListener {
 
@@ -30,11 +34,13 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     }
 
     public ListAdapter(LayoutInflater layoutInflater, int[] ids,
-                       MyAdapterListener myAdapterListener) {
+                       MyAdapterListener myAdapterListener, LinearLayoutManager linearLayoutManager, NavController navcont) {
         inflater = layoutInflater;
         onClickListener = myAdapterListener;
         id = ids;
         studentIds = favoriteStudent();
+        manager = linearLayoutManager;
+        navController = navcont;
     }
 
     public ArrayList<Integer> favoriteStudent() {
@@ -73,7 +79,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         if (id[0] != R.layout.row_messages && id[0] != R.layout.row_notif) {
             holder.profileDescrip.setText(student.getInteret());
         }
-        if (id[0] != R.layout.row_messages && id[0] != R.layout.row_convo && id[0] != R.layout.row_notif && id[0] != R.layout.row_favori) {
+        if (id[0] != R.layout.row_messages && id[0] != R.layout.row_convo && id[0] != R.layout.row_notif) {
                 holder.likeButton.setColorFilter(student.getLike());
         }
     }
@@ -103,7 +109,20 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             if (id[0] != R.layout.row_convo) {
                 viewProfile = itemView.findViewById(R.id.profile_button);
                 profile_pic = itemView.findViewById(R.id.profile_img);
-                viewProfile.setOnClickListener(v -> onClickListener.profileClicked(v, getAdapterPosition()));
+                viewProfile.setOnClickListener(v -> {
+                    String[] profInfo = new String[1];
+                    View val = manager.findViewByPosition(getAdapterPosition());
+                    assert val != null;
+                    TextView name = val.findViewById(R.id.profile_text1);
+                    if (id[0] == R.layout.row_favori) {
+                        profInfo[0] = name.getTag().toString();
+                        FavoriDirections.ActionNavigationSavedToViewProfileFragment action =
+                                FavoriDirections.actionNavigationSavedToViewProfileFragment(profInfo);
+                        action.setInfo(profInfo);
+                        navController.navigate(action);
+                    }
+
+                });
             }
         }
     }

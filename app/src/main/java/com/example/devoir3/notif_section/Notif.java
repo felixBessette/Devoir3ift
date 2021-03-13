@@ -1,6 +1,5 @@
 package com.example.devoir3.notif_section;
 
-import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -18,7 +17,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.devoir3.ListAdapter;
-import com.example.devoir3.NavigationMain;
 import com.example.devoir3.R;
 
 public class Notif extends Fragment {
@@ -74,7 +72,7 @@ public class Notif extends Fragment {
                 TextView status = val.findViewById(R.id.friend_status);
                 status.setText(null);
             }
-        });
+        }, linearLayoutManager , navController);
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
         RecyclerView.ItemDecoration itemDecoration = new

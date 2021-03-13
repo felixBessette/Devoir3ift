@@ -17,8 +17,9 @@ public class StudentList {
         String[] interets = context.getResources().getStringArray(R.array.student_interet);
         String[] convo = context.getResources().getStringArray(R.array.convo1);
         avatar = new int[]{R.drawable.avatar1, R.drawable.avatar2, R.drawable.avatar3, R.drawable.avatar7,
+                R.drawable.avatar8, R.drawable.avatar9, R.drawable.avatar10, R.drawable.avatar11, R.drawable.avatar12, R.drawable.avatar1, R.drawable.avatar2, R.drawable.avatar3, R.drawable.avatar7,
                 R.drawable.avatar8, R.drawable.avatar9, R.drawable.avatar10, R.drawable.avatar11, R.drawable.avatar12};
-        for (int i = 0; i < 9; i ++) {
+        for (int i = 0; i < 18; i ++) {
             int fav = Color.RED;
             if (Math.random() > 0.5) {
                 fav = Color.BLACK;

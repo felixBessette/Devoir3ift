@@ -61,7 +61,7 @@ public class ViewProfile extends Fragment {
             String[] info = args.getInfo();
             StudentList.Student student = NavigationMain.studentList.get(Integer.parseInt(info[0]));
             name.setText(student.getName());
-            like.setColorFilter(Color.RED);
+            like.setColorFilter(student.getLike());
             profile_img.setImageResource(student.getPic());
         }
 

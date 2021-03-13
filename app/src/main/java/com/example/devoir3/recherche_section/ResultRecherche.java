@@ -96,7 +96,7 @@ public class ResultRecherche extends Fragment {
             public void otherClicked(View v, int position) {
 
             }
-        });
+        }, linearLayoutManager, navController);
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
         RecyclerView.ItemDecoration itemDecoration = new

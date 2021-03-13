@@ -81,6 +81,15 @@
         <item>J\'aime les maths</item>
         <item>J\'aime l\'info</item>
         <item>J\'aime les maths</item>
+        <item>J\'aime les maths</item>
+        <item>J\aime l\'info</item>
+        <item>J\'aime les maths</item>
+        <item>J\'aime l\'info</item>
+        <item>J\'aime les maths</item>
+        <item>J\'aime l\'info</item>
+        <item>J\'aime les maths</item>
+        <item>J\'aime l\'info</item>
+        <item>J\'aime les maths</item>
     </string-array>
 
     <string-array name="student_cours">
@@ -116,6 +125,15 @@
         <item>Jas</item>
         <item>Nath</item>
         <item>Eli</item>
+        <item>Fred</item>
+        <item>Oli</item>
+        <item>Charly</item>
+        <item>Alex</item>
+        <item>Sarah</item>
+        <item>Adri</item>
+        <item>Jas</item>
+        <item>Nath</item>
+        <item>Sam</item>
     </string-array>
 
 

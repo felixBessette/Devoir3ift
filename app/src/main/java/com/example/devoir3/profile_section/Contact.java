@@ -19,7 +19,6 @@ import android.widget.TextView;
 
 import com.example.devoir3.ListAdapter;
 import com.example.devoir3.R;
-import com.example.devoir3.favori_section.FavoriDirections;
 
 
 public class Contact extends Fragment {
@@ -80,7 +79,7 @@ public class Contact extends Fragment {
                             like.setTag(Color.RED);
                         }
                     }
-                });
+                },linearLayoutManager , navController);
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
         RecyclerView.ItemDecoration itemDecoration = new
