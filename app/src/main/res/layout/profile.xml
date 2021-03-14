@@ -93,9 +93,10 @@
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.44"
+            app:layout_constraintHorizontal_bias="0.39"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/contact" />
+            app:layout_constraintTop_toBottomOf="@+id/contact"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/contact"
@@ -118,7 +119,7 @@
             android:id="@+id/personnaliser"
             android:layout_width="249dp"
             android:layout_height="48dp"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="40dp"
             android:background="@android:color/transparent"
             android:drawableStart="@drawable/ic_baseline_edit_24"
             android:drawableTint="@color/black"
@@ -127,7 +128,7 @@
             android:textColor="@color/text_blue"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.434"
+            app:layout_constraintHorizontal_bias="0.393"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 

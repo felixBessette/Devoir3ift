@@ -16,7 +16,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="161dp">
+            android:layout_height="161dp"
+            android:background="@drawable/divider_style">
 
             <TextView
                 android:id="@+id/profile_text1"

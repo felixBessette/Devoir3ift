@@ -9,6 +9,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -16,7 +18,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="161dp">
+            android:layout_height="161dp"
+            android:background="@drawable/divider_style">
 
             <TextView
                 android:id="@+id/profile_text1"
@@ -64,6 +67,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
                 android:background="@color/blue_main"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="6dp"
                 android:text="@string/profile"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/likeButton"

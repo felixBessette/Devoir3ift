@@ -20,42 +20,53 @@ public class StudentList {
                 R.drawable.avatar8, R.drawable.avatar9, R.drawable.avatar10, R.drawable.avatar11, R.drawable.avatar12};
         for (int i = 0; i < 18; i ++) {
             int fav = Color.RED;
+            int status = 0;
             if (Math.random() > 0.5) {
-                fav = Color.BLACK;
+                fav = Color.LTGRAY;
+                if (Math.random() > 0.66) {
+                    status = 1; // Veut pas être dans ses amis
+                }
+                else if(Math.random() < 0.33) {
+                    fav = Color.BLACK;
+                }
+                else {
+                    status = 2; // Veut être son ami
+                }
             }
-            Student student = new Student(names[i], avatar[i], fav, interets[i], i);
+            Student student = new Student(names[i], avatar[i], fav, interets[i], status);
             studentList.add(student);
         }
         return studentList;
     }
 
-    public Student getStudent(ArrayList<Student> studentArrayList,  int id) {
-        Student student = null;
-        for (int i = 0; i<9; i++) {
-            if (studentArrayList.get(i).getId() == id) {
-                student = studentArrayList.get(i);
-            }
-        }
-        return student;
-    }
-
     public static class Student {
-        String n;
-        int p;
-        int l;
-        String i;
-        int id;
-        public Student(String name, int picture, int like, String interet, int ident) {
-            n = name;
-            p = picture;
-            l = like;
-            i = interet;
-            id = ident;
+        String name;
+        int picture;
+        int like;
+        String interet;
+        int relation;
+        public Student(String n, int p, int l, String i, int r) {
+            name = n;
+            picture = p;
+            like = l;
+            interet = i;
+            relation = r;
         }
-        public String getName() {return n;}
-        public int getPic() {return p;}
-        public int getLike() {return l;}
-        public String getInteret() {return i;}
-        public int getId() {return id;}
+        public void sendRequest() {
+            this.relation = 3;
+        }
+        public void acceptRequest() {
+            this.like = Color.BLACK;
+            this.relation = 0;
+        }
+        public void removeFriend() {
+            this.relation = 1;
+            this.like = Color.LTGRAY;
+        }
+        public String getName() {return name;}
+        public int getPic() {return picture;}
+        public int getLike() {return like;}
+        public String getInteret() {return interet;}
+        public int getId() {return relation;}
     }
 }

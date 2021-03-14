@@ -22,6 +22,7 @@ public class NavigationMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.navigation);
+
         StudentList s = new StudentList(getApplicationContext());
         studentList = s.initialiseStudentList();
         BottomNavigationView navView = findViewById(R.id.nav_view);

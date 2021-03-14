@@ -18,8 +18,6 @@ import com.example.devoir3.R;
 
 
 public class Contact extends Fragment {
-    String[] studentName, studentInterest;
-    int img = R.drawable.avatar;
     RecyclerView recyclerView;
 
     public Contact() {
@@ -39,12 +37,10 @@ public class Contact extends Fragment {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.contact, container, false);
         recyclerView = root.findViewById(R.id.contact_recycler);
-        String[] profInfo = new String[3];
         int ids = R.layout.row_contacts;
         LinearLayoutManager linearLayoutManager = new  LinearLayoutManager(getContext());
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
-        ListAdapter myAdapter = new ListAdapter(inflater, ids,
-                linearLayoutManager , navController);
+        ListAdapter myAdapter = new ListAdapter(inflater, ids, linearLayoutManager , navController);
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
         RecyclerView.ItemDecoration itemDecoration = new

@@ -24,15 +24,6 @@ import com.example.devoir3.recherche_section.ResultRecherche;
 public class Conversation extends Fragment {
     RecyclerView recyclerView;
 
-    public Conversation() {
-        // Required empty public constructor
-    }
-
-    // TODO: Rename and change types and number of parameters
-    public static ResultRecherche newInstance() {
-        return new ResultRecherche();
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,9 +52,6 @@ public class Conversation extends Fragment {
                 linearLayoutManager ,navController);
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
-        RecyclerView.ItemDecoration itemDecoration = new
-                DividerItemDecoration(root.getContext(), DividerItemDecoration.VERTICAL);
-        recyclerView.addItemDecoration(itemDecoration);
         linearLayoutManager.setReverseLayout(true);
         linearLayoutManager.setStackFromEnd(false);
         return root;

@@ -11,4 +11,6 @@
     <color name="real_blue">#0088F8</color>
     <color name="text_blue">#0E052C</color>
     <color name="green_color">#1BAF0A</color>
+    <color name="divider_color">#32FFFFFF</color>
+    <color name="like_disabled">#61656A</color>
 </resources>

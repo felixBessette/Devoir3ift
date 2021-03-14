@@ -73,9 +73,9 @@ public class ResultRecherche extends Fragment {
         ListAdapter myAdapter = new ListAdapter(inflater, ids, linearLayoutManager, navController);
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
-        RecyclerView.ItemDecoration itemDecoration = new
-                DividerItemDecoration(root.getContext(), DividerItemDecoration.VERTICAL);
-        recyclerView.addItemDecoration(itemDecoration);
+                RecyclerView.ItemDecoration itemDecoration = new
+                        DividerItemDecoration(root.getContext(), DividerItemDecoration.VERTICAL);
+                recyclerView.addItemDecoration(itemDecoration);
         return root;
 
 

@@ -1,20 +1,15 @@
 package com.example.devoir3;
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
-import androidx.cardview.widget.CardView;
-import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -23,13 +18,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-
-import com.example.devoir3.ListAdapter;
-import com.example.devoir3.R;
-import com.example.devoir3.messages_section.MessagesDirections;
-import com.example.devoir3.recherche_section.ResultRechercheArgs;
-
-import static androidx.core.content.ContextCompat.getSystemService;
 
 
 public class ViewProfile extends Fragment {
@@ -50,12 +38,11 @@ public class ViewProfile extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.view_profile, container, false);
-        Button message = root.findViewById(R.id.envoyer_message), ami = root.findViewById(R.id.demande_ami),
-                partage = root.findViewById(R.id.partager);
-        TextView name = root.findViewById(R.id.view_prof_name);
+        Button message = root.findViewById(R.id.envoyer_message), partage = root.findViewById(R.id.partager);
+        TextView name = root.findViewById(R.id.view_prof_name), relation_status = root.findViewById(R.id.envoyer_demande_txt);
         ImageView profile_img = root.findViewById(R.id.profile_picture);
-        ImageButton like = root.findViewById(R.id.view_prof_like);
-        String[] profInfo = new String[3];
+        ImageButton like = root.findViewById(R.id.view_prof_like), add_friend = root.findViewById(R.id.demande_ami_button);
+
         if (getArguments() != null) {
             ViewProfileArgs args = ViewProfileArgs.fromBundle(getArguments());
             String[] info = args.getInfo();
@@ -63,12 +50,52 @@ public class ViewProfile extends Fragment {
             name.setText(student.getName());
             like.setColorFilter(student.getLike());
             profile_img.setImageResource(student.getPic());
+
+            if (student.relation == 0) {
+                relation_status.setText(R.string.remove_friend);
+                add_friend.setImageResource(R.drawable.remove);
+            }
+            if (student.relation == 2) {
+                relation_status.setText(R.string.accept);
+            }
+            if (student.relation == 3) {
+                add_friend.setImageResource(R.drawable.pending);
+                relation_status.setText(R.string.pending);
+            }
             message.setOnClickListener(v -> {
                 NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
                 ViewProfileDirections.ActionViewProfileFragmentToConversation action =
                         ViewProfileDirections.actionViewProfileFragmentToConversation(info);
                 navController.navigate(action);
             });
+            like.setOnClickListener(v -> {
+                if (student.like == Color.RED) {
+                    like.setColorFilter(Color.BLACK);
+                    student.like = Color.BLACK;
+                }
+                else if (student.like == Color.BLACK) {
+                    like.setColorFilter(Color.RED);
+                    student.like = Color.RED;
+                }
+            });
+            add_friend.setOnClickListener(v -> {
+                if (student.relation == 0) {
+                    add_friend.setImageResource(R.drawable.friend_added);
+                    relation_status.setText(R.string.sent);
+                    student.removeFriend();
+                }
+                else if (student.relation == 1) {
+                    add_friend.setImageResource(R.drawable.friend_added);
+                    relation_status.setText(R.string.sent);
+                    student.relation = 3;
+                }
+                else if (student.relation == 2) {
+                    add_friend.setImageResource(R.drawable.friend_added);
+                    student.acceptRequest();
+                }
+            });
+
+
         }
 
         partage.setOnClickListener(v -> {

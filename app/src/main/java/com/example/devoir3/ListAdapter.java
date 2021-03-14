@@ -1,6 +1,7 @@
 package com.example.devoir3;
 
 import android.graphics.Color;
+import android.graphics.ColorFilter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,7 +45,21 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         ArrayList<Integer> ids = new ArrayList<>();
         if (id == R.layout.row_favori) {
             for (int i = 0; i < NavigationMain.studentList.size(); i++) {
-                if (NavigationMain.studentList.get(i).getLike() == Color.RED) {
+                if (NavigationMain.studentList.get(i).like == Color.RED) {
+                    ids.add(i);
+                }
+            }
+        }
+        else if (id == R.layout.row_notif) {
+            for (int i = 0; i < NavigationMain.studentList.size(); i++) {
+                if (NavigationMain.studentList.get(i).relation == 2) {
+                    ids.add(i);
+                }
+            }
+        }
+        else if (id == R.layout.row_contacts || id == R.layout.row_messages) {
+            for (int i = 0; i < NavigationMain.studentList.size(); i++) {
+                if (NavigationMain.studentList.get(i).relation == 0) {
                     ids.add(i);
                 }
             }
@@ -54,7 +69,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
                 ids.add(i);
             }
         }
-        System.out.println(ids);
         return ids;
     }
 
@@ -70,20 +84,20 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         StudentList.Student student = NavigationMain.studentList.get(studentIds.get(position));
-        String name = student.getName();
-        String interet = student.getInteret();
+        String name = student.name;
+        String interet = student.interet;
         if (id == R.layout.row_convo) {
             name = convo1[position];
             interet = convo2[position];
             holder.profileDescrip.setText(interet);
         }
         else {
-            holder.profile_pic.setImageResource(student.getPic());
+            holder.profile_pic.setImageResource(student.picture);
         }
         holder.profileName.setText(name);
-        holder.profileName.setTag(student.getId());
+        holder.profileName.setTag(studentIds.get(position));
         if (id != R.layout.row_messages && id != R.layout.row_convo && id != R.layout.row_notif) {
-                holder.likeButton.setColorFilter(student.getLike());
+            holder.likeButton.setColorFilter(student.like);
             holder.profileDescrip.setText(interet);
         }
     }
@@ -109,6 +123,23 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             if (id != R.layout.row_convo && id != R.layout.row_messages) {
                 likeButton = itemView.findViewById(R.id.likeButton);
                 likeButton.setOnClickListener(v -> {
+                    View val = manager.findViewByPosition(getAdapterPosition());
+                    assert val != null;
+                    TextView name = val.findViewById(R.id.profile_text1);
+                    StudentList.Student student = NavigationMain.studentList.get((int)name.getTag());
+                    if (id == R.layout.row_notif) {
+                        likeButton.setImageResource(R.drawable.friend_added);
+                        student.acceptRequest();
+                    }
+                    else {
+                        if (student.like == Color.RED) {
+                            student.like = Color.BLACK;
+                            likeButton.setColorFilter(Color.BLACK);
+                        } else if (student.like == Color.BLACK) {
+                            student.like = Color.RED;
+                            likeButton.setColorFilter(Color.RED);
+                        }
+                    }
                 });
             }
             if (id != R.layout.row_convo) {

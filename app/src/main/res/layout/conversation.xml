@@ -17,17 +17,20 @@
         android:layout_marginTop="-1dp"
         android:layout_marginBottom="54dp" />
 
-    <SearchView
-        android:layout_width="332dp"
-        android:layout_height="36dp"
+    <EditText
+        android:id="@+id/plain_text_input"
+        style="@android:style/Widget.AutoCompleteTextView"
+        android:layout_width="327dp"
+        android:layout_height="34dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="11dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="9dp"
+        android:layout_toStartOf="@+id/imageButton2"
         android:background="@drawable/border"
-        android:searchHintIcon="@drawable/ic_baseline_dehaze_24"
-        android:searchIcon="@color/white" />
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButton2"

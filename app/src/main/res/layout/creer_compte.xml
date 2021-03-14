@@ -26,7 +26,7 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
 
         android:layout_width="310dp"
         android:layout_height="40dp"
@@ -35,23 +35,15 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="33dp"
         android:layout_marginTop="332dp"
-        android:alwaysDrawnWithCache="false"
         android:background="@drawable/border"
-        app:helperTextEnabled="?android:attr/windowOverscan">
+        android:inputType="text">
 
         <com.google.android.material.textfield.TextInputLayout
 
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="34dp"
-            android:layout_marginTop="235dp"
             android:alwaysDrawnWithCache="false"
             android:background="@drawable/border"
             app:helperTextEnabled="?android:attr/windowOverscan" />
-    </com.google.android.material.textfield.TextInputLayout>
+    </EditText>
 
     <TextView
         android:id="@+id/mdp3"
@@ -140,34 +132,26 @@
         android:text="@string/retour"
         android:textColor="@color/black" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
 
         android:layout_width="310dp"
         android:layout_height="40dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="237dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:alwaysDrawnWithCache="false"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="237dp"
         android:background="@drawable/border"
-        app:helperTextEnabled="?android:attr/windowOverscan">
+        android:inputType="text">
 
         <com.google.android.material.textfield.TextInputLayout
 
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="34dp"
-            android:layout_marginTop="235dp"
             android:alwaysDrawnWithCache="false"
             android:background="@drawable/border"
             app:helperTextEnabled="?android:attr/windowOverscan" />
-    </com.google.android.material.textfield.TextInputLayout>
+    </EditText>
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
         android:layout_width="310dp"
         android:layout_height="40dp"
         android:layout_alignParentTop="true"
@@ -180,13 +164,11 @@
         android:outlineAmbientShadowColor="@color/black"
         android:textColorHint="@color/black"
         android:visibility="visible"
-        app:boxStrokeColor="@color/blue_main"
-        app:shapeAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
-        app:shapeAppearanceOverlay="@style/TextAppearance.AppCompat.Headline">
+        android:inputType="text">
 
-    </com.google.android.material.textfield.TextInputLayout>
+    </EditText>
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
         android:layout_width="310dp"
         android:layout_height="40dp"
         android:layout_alignParentStart="true"
@@ -194,6 +176,7 @@
         android:layout_centerInParent="true"
         android:layout_marginStart="35dp"
         android:layout_marginTop="430dp"
-        android:background="@drawable/border" />
+        android:background="@drawable/border"
+        android:inputType="text"/>
 
 </RelativeLayout>
