@@ -1,15 +1,15 @@
 Explication/clarification de l'application
--------------------------------------------
+--------------------------------------------------------------------------------------------
 
 1.Ouverture de l'application:
 
-Quand l'utilisateur ouvre l'application, il est sur la page d'authentification
-où l'on demande de lui d'entrer son courriel et mot de passe. S'il n'a pas de
-compte, on lui propose d'enregistrer un nouveau compte en cliquant sur "s'enregistrer?"
-en bas à droite et cela l'amène à la page . S'il a oublie son mot de passe, il peut cliquer sur "mot de passe oublié?"
-en bas à gauche
+-l'utilisateur est sur la page d'authentification
+-doit entrer son courriel et mot de passe
+-s'il a oublié son mot de passe -> peut cliquer sur "mot de passe oublié?" en bas à gauche
+-s'il n'a pas de compte -> peut cliquer sur "s'enregistrer?" en bas à droite
+-lorsqu'il se connecte, il peut utiliser l'application.
 
-Lorsqu'il se connecte, il peut utiliser l'application.
+
 
 2.Menu de navigation:
 
@@ -44,6 +44,7 @@ les accepter ou les refuser
 ajouter/enlever des favoris, retirer de ses amis
 
 
+
 3.Profil d'autrui:
 
 -ajouter/retirer de sa liste d'amis
@@ -53,6 +54,4 @@ ajouter/enlever des favoris, retirer de ses amis
 -envoyer un message
 
 
-
-
-
+--------------------------------------------------------------------------------------------
