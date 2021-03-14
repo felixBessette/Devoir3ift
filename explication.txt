@@ -54,4 +54,10 @@ ajouter/enlever des favoris, retirer de ses amis
 -envoyer un message
 
 
+
+N.B.: Pour mieux montrer comment l'application fonctionnerait, on a créé des avatars et pour
+chacun d'un on a mis aléatoirement leurs cours, intérêts et clubs, s'ils sont amis ou pas
+avec l'utilisateur ou s'ils font une demande d'ami, s'ils sont dans les favoris ou pas de
+l'utilisateur.
+
 --------------------------------------------------------------------------------------------
