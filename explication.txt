@@ -1,0 +1,57 @@
+Explication/clarification de l'application
+--------------------------------------------------------------------------------------------
+
+1.Ouverture de l'application:
+
+-l'utilisateur est sur la page d'authentification
+-doit entrer son courriel et mot de passe
+-s'il a oublié son mot de passe -> peut cliquer sur "mot de passe oublié?" en bas à gauche
+-s'il n'a pas de compte -> peut cliquer sur "s'enregistrer?" en bas à droite
+-lorsqu'il se connecte, il peut utiliser l'application.
+
+
+
+2.Menu de navigation:
+
+2.1 Recherche: 
+
+-permet de chercher des amis à ajouter en fonction des intérêts communs,
+des cours en commun et/ou des clubs en commun.
+
+-une fois un critère sélectionné, il peut voir la liste des gens proposés et
+voir leur profile, ajouter/enlever des favoris, faire une demande d'amis, etc.
+
+2.2 Favoris:
+
+-voir la liste de ses amis pour lesquels il a mis comme "favoris"
+
+2.3 Messages:
+
+-liste de ses amis avec qui il a des conversations
+-quand on clique sur un d'entre eux, cela ammène à la page de conversation
+
+2.4 Notifications:
+
+-montre la liste des gens qui lui ont envoyer une demande d'ami, il peut soit
+les accepter ou les refuser
+
+2.4 Profil:
+
+-profil de l'utilisateur
+-peut modifier ses données en cliquant sur personnaliser
+-changer sa photo de profil en cliquand sur la caméra
+-voir sa liste de contacts/amis (favoris et non-favoris) -> il peut voir leur profil,
+ajouter/enlever des favoris, retirer de ses amis
+
+
+
+3.Profil d'autrui:
+
+-ajouter/retirer de sa liste d'amis
+-ajouter/retirer de sa liste de "Favoris"
+-voir les cours, intérêts et clubs de la personne
+-partager son compte via d'autres application de réseaux sociaux
+-envoyer un message
+
+
+--------------------------------------------------------------------------------------------
