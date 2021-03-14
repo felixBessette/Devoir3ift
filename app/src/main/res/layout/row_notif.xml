@@ -23,14 +23,14 @@
                 android:id="@+id/profile_text1"
                 android:layout_width="83dp"
                 android:layout_height="27dp"
-                android:layout_marginEnd="132dp"
+                android:layout_marginEnd="128dp"
                 android:text="TextView"
-                android:textColor="@color/blue_main"
+                android:textColor="@color/text_blue"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toTopOf="@+id/likeButton"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView8"
-                app:layout_constraintVertical_bias="0.325" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <ImageView
                 android:id="@+id/profile_img"
@@ -48,36 +48,32 @@
                 android:id="@+id/profile_button"
                 android:layout_width="94dp"
                 android:layout_height="35dp"
-                android:layout_marginStart="12dp"
+                android:layout_marginEnd="76dp"
                 android:background="@color/blue_main"
                 android:text="@string/profile"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.375"
-                app:layout_constraintStart_toEndOf="@+id/likeButton"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.812" />
+                app:layout_constraintVertical_bias="0.947" />
 
             <ImageButton
                 android:id="@+id/likeButton"
                 android:layout_width="105dp"
                 android:layout_height="34dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginBottom="28dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"
                 android:background="@android:color/transparent"
                 android:scaleType="fitStart"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.007"
+                app:layout_constraintBottom_toTopOf="@+id/profile_button"
                 app:layout_constraintStart_toEndOf="@+id/profile_img"
-                app:srcCompat="@drawable/ic_baseline_person_add_24" />
+                app:srcCompat="@drawable/ic_baseline_person_add_alt_1_24" />
 
             <TextView
-                android:id="@+id/friend_status"
+                android:id="@+id/notif_friends_accept"
                 android:layout_width="70dp"
                 android:layout_height="21dp"
                 android:text="@string/accept"
-                android:textColor="@color/purple_700"
+                android:textColor="@color/text_blue"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/likeButton"
                 app:layout_constraintEnd_toEndOf="@+id/likeButton"
@@ -98,6 +94,35 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/profile_img"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/refuse_request"
+                android:layout_width="115dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="24dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitStart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/likeButton"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.611"
+                app:srcCompat="@drawable/ic_baseline_close_24" />
+
+            <TextView
+                android:id="@+id/friends_notif_refuse"
+                android:layout_width="72dp"
+                android:layout_height="23dp"
+                android:text="@string/refuser"
+                android:textAlignment="textStart"
+                android:textColor="@color/text_blue"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/refuse_request"
+                app:layout_constraintEnd_toEndOf="@+id/refuse_request"
+                app:layout_constraintHorizontal_bias="0.744"
+                app:layout_constraintStart_toStartOf="@+id/refuse_request"
+                app:layout_constraintTop_toTopOf="@+id/refuse_request"
+                app:layout_constraintVertical_bias="1.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

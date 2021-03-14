@@ -17,6 +17,7 @@
     <string name="confirm">Confirmer</string>
     <string name="inscrire">S\'inscrire</string>
     <string name="retour">Retour</string>
+    <string name="refuser">Refuser</string>
     <string name="entrer_adresse">Entrez votre adresse courriel</string>
     <string name="mdp_temporaire">Mot de passe temporaire</string>
 
@@ -66,11 +67,13 @@
     <string name="liste_fav">Voici la liste des étudiants en favoris</string>
     <string name="rech_title">Recherche</string>
     <string name="remove_friend">Retirer</string>
+    <string name="remove_success">Contact retiré</string>
     <string name="donnees">Données du profil</string>
     <string name="demande">Demande d\'ami de </string>
     <string name="securite">Sécurité</string>
     <string name="accept">Accepter</string>
     <string name="local">Localisation</string>
+
     <string-array name="student_interet">
         <item>J\'aime les maths</item>
         <item>J\aime l\'info</item>

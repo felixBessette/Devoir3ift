@@ -79,18 +79,16 @@ public class ViewProfile extends Fragment {
                 }
             });
             add_friend.setOnClickListener(v -> {
+                relation_status.setText(R.string.remove_success);
                 if (student.relation == 0) {
                     add_friend.setImageResource(R.drawable.friend_added);
-                    relation_status.setText(R.string.sent);
                     student.removeFriend();
                 }
                 else if (student.relation == 1) {
-                    add_friend.setImageResource(R.drawable.friend_added);
                     relation_status.setText(R.string.sent);
                     student.relation = 3;
                 }
                 else if (student.relation == 2) {
-                    add_friend.setImageResource(R.drawable.friend_added);
                     student.acceptRequest();
                 }
             });

@@ -110,16 +110,33 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView profileName, profileDescrip;
+        TextView profileName, profileDescrip, accept, refuse;
         ImageView profile_pic;
         public Button viewProfile;
         ImageButton likeButton;
+        ImageButton refuseButton;
 
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             profileName = itemView.findViewById(R.id.profile_text1);
             profileDescrip = itemView.findViewById(R.id.profile_text2);
+            if (id == R.layout.row_notif) {
+                accept = itemView.findViewById(R.id.notif_friends_accept);
+                refuse = itemView.findViewById(R.id.friends_notif_refuse);
+                refuseButton = itemView.findViewById(R.id.refuse_request);
+                refuseButton.setOnClickListener(v -> {
+                    View val = manager.findViewByPosition(getAdapterPosition());
+                    assert val != null;
+                    TextView name = val.findViewById(R.id.profile_text1);
+                    StudentList.Student student = NavigationMain.studentList.get((int)name.getTag());
+                    likeButton.setVisibility(View.INVISIBLE);
+                    refuse.setVisibility(View.INVISIBLE);
+                    accept.setVisibility(View.INVISIBLE);
+                    student.removeFriend();
+                    refuseButton.setImageResource(R.drawable.friend_added);
+                });
+            }
             if (id != R.layout.row_convo && id != R.layout.row_messages) {
                 likeButton = itemView.findViewById(R.id.likeButton);
                 likeButton.setOnClickListener(v -> {
@@ -129,6 +146,9 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
                     StudentList.Student student = NavigationMain.studentList.get((int)name.getTag());
                     if (id == R.layout.row_notif) {
                         likeButton.setImageResource(R.drawable.friend_added);
+                        refuseButton.setVisibility(View.INVISIBLE);
+                        refuse.setVisibility(View.INVISIBLE);
+                        accept.setVisibility(View.INVISIBLE);
                         student.acceptRequest();
                     }
                     else {
