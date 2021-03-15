@@ -39,10 +39,13 @@ public class ViewProfile extends Fragment {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.view_profile, container, false);
         Button message = root.findViewById(R.id.envoyer_message), partage = root.findViewById(R.id.partager);
-        TextView name = root.findViewById(R.id.view_prof_name), relation_status = root.findViewById(R.id.envoyer_demande_txt);
+        TextView name = root.findViewById(R.id.view_prof_name), relation_status = root.findViewById(R.id.envoyer_demande_txt),
+                interet = root.findViewById(R.id.interet_text),
+                cours = root.findViewById(R.id.cours_text),
+                clubs = root.findViewById(R.id.clubs_texte);
         ImageView profile_img = root.findViewById(R.id.profile_picture);
         ImageButton like = root.findViewById(R.id.view_prof_like), add_friend = root.findViewById(R.id.demande_ami_button);
-
+        boolean isClickable = true;
         if (getArguments() != null) {
             ViewProfileArgs args = ViewProfileArgs.fromBundle(getArguments());
             String[] info = args.getInfo();
@@ -50,6 +53,9 @@ public class ViewProfile extends Fragment {
             name.setText(student.getName());
             like.setColorFilter(student.getLike());
             profile_img.setImageResource(student.getPic());
+            interet.setText(student.interet[0]);
+            cours.setText(student.interet[1]);
+            clubs.setText(student.interet[2]);
 
             if (student.relation == 0) {
                 relation_status.setText(R.string.remove_friend);
@@ -79,9 +85,9 @@ public class ViewProfile extends Fragment {
                 }
             });
             add_friend.setOnClickListener(v -> {
-                relation_status.setText(R.string.remove_success);
+                add_friend.setImageResource(R.drawable.friend_added);
                 if (student.relation == 0) {
-                    add_friend.setImageResource(R.drawable.friend_added);
+                    relation_status.setText(R.string.remove_success);
                     student.removeFriend();
                 }
                 else if (student.relation == 1) {

@@ -85,7 +85,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         StudentList.Student student = NavigationMain.studentList.get(studentIds.get(position));
         String name = student.name;
-        String interet = student.interet;
+        String interet = student.interet[0];
         if (id == R.layout.row_convo) {
             name = convo1[position];
             interet = convo2[position];

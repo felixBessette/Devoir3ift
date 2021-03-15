@@ -42,10 +42,10 @@
     <string name="profile">Profil</string>
 
     <string name="rech_message">Message</string>
-    <string name="apropos">Cours :</string>
-    <string name="cours_pris">Clubs :</string>
+    <string name="apropos">Cours</string>
+    <string name="cours_pris">Clubs</string>
     <string name="add_friend">Demande d\'ami</string>
-    <string name="club_participe">Intérêts :</string>
+    <string name="club_participe">Intérêts</string>
 
     <string name="etudiant1">Nom1</string>
     <string name="etudiant2">Nom2</string>
@@ -75,47 +75,65 @@
     <string name="local">Localisation</string>
 
     <string-array name="student_interet">
+        <item>Maths, Info, Baseball</item>
+        <item>Info, Science, Golf</item>
+        <item>Bowling, Football, Soccer</item>
+        <item>Tennis, Surf, Skateboard</item>
+        <item>Ski, Vélo</item>
+        <item>Maths, Info, Baseball</item>
+        <item>Cuisine, Chimie, Jeux vidéos</item>
+        <item>Info, Science, Golf</item>
+        <item>Tennis, Surf, Skateboard</item>
         <item>J\'aime les maths</item>
-        <item>J\aime l\'info</item>
-        <item>J\'aime les maths</item>
-        <item>J\'aime l\'info</item>
-        <item>J\'aime les maths</item>
-        <item>J\'aime l\'info</item>
-        <item>J\'aime les maths</item>
-        <item>J\'aime l\'info</item>
-        <item>J\'aime les maths</item>
-        <item>J\'aime les maths</item>
-        <item>J\aime l\'info</item>
-        <item>J\'aime les maths</item>
-        <item>J\'aime l\'info</item>
-        <item>J\'aime les maths</item>
-        <item>J\'aime l\'info</item>
-        <item>J\'aime les maths</item>
-        <item>J\'aime l\'info</item>
-        <item>J\'aime les maths</item>
+        <item>Info, Science, Golf</item>
+        <item>Bowling, Football, Soccer</item>
+        <item>Tennis, Surf, Skateboard</item>
+        <item>Bowling, Football, Soccer</item>
+        <item>Maths, Info, Baseball</item>
+        <item>Tennis, Surf, Skateboard</item>
+        <item>Bowling, Football, Soccer</item>
+        <item>Info, Science, Golf</item>
     </string-array>
 
     <string-array name="student_cours">
-        <item>IFT2905</item>
-        <item>IFT2245</item>
-        <item>IFT2945</item>
-        <item>IFT2015</item>
-        <item>IFT2145</item>
-        <item>IFT1575</item>
-        <item>MATH1600</item>
-        <item>BIO1000</item>
-        <item>PSY1001</item>
+        <item>IFT2905, IFT2245, PHY101, IFT1575</item>
+        <item>IFT2245, PHY101, IFT1575</item>
+        <item>IFT2945, IFT3315, IFT2145</item>
+        <item>IFT2015, CHY201, IFT295</item>
+        <item>IFT2145, IFT24432, PSY2223</item>
+        <item>IFT1575, IFT2015, CHY201</item>
+        <item>MATH1600, JEU1003, DROIT234</item>
+        <item>BIO1000, JEU1003, DROIT234</item>
+        <item>PSY1001, IFT24432, PSY2223</item>
+        <item>IFT2905, IFT2945, IFT3315</item>
+        <item>IFT2245, JEU1003, DROIT234</item>
+        <item>IFT2945, PHY101, IFT1575</item>
+        <item>IFT2015,PHY101, IFT1575 </item>
+        <item>IFT2145, IFT2015, CHY201</item>
+        <item>IFT1575, IFT24432, PSY2223</item>
+        <item>MATH1600, PHY101, IFT1575</item>
+        <item>BIO1000, PHY101, IFT1575</item>
+        <item>PSY1001,IFT24432, PSY2223</item>
     </string-array>
     <string-array name="student_clubs">
-        <item>Échec</item>
-        <item>Génie en herbe</item>
-        <item>Administration</item>
-        <item>Hacking</item>
-        <item>Natation</item>
-        <item>Sport extérieur</item>
+        <item>Échec, Camping, Ski</item>
+        <item>Génie, Admin</item>
+        <item>Yoga, Course</item>
+        <item>Hacking, Génie, Admin</item>
+        <item>Natation, Yoga, Course</item>
+        <item>Aucun</item>
         <item>Bénévolat</item>
-        <item>Camping</item>
-        <item>Environnement</item>
+        <item>Camping, Génie, Admin</item>
+        <item>Environnement, Yoga, Course</item>
+        <item>Échec, Génie, Admin</item>
+        <item>Aucun</item>
+        <item>Admin, Yoga, Course</item>
+        <item>Hacking, Génie, Admin</item>
+        <item>Natation, Yoga, Course</item>
+        <item>Sport, Yoga, Course</item>
+        <item>Bénévolat, Génie, Admin</item>
+        <item>Camping, Génie, Admin</item>
+        <item>Environnement, Génie, Admin</item>
     </string-array>
 
     <string-array name="student_name">

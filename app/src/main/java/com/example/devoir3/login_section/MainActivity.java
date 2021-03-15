@@ -27,13 +27,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         b2.setOnClickListener(v -> {
-            Intent intent1 = new Intent(this, MotPasseOublier.class);
-            startActivity(intent1);
+            Intent intent2 = new Intent(this, MotPasseOublier.class);
+            startActivity(intent2);
         });
 
         b3.setOnClickListener(v -> {
-            Intent intent1 = new Intent(this, CreerCompte.class);
-            startActivity(intent1);
+            Intent intent3 = new Intent(this, CreerCompte.class);
+            startActivity(intent3);
         });
     }
 }
