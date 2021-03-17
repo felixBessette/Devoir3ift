@@ -24,10 +24,11 @@
                 android:layout_width="131dp"
                 android:layout_height="41dp"
                 android:text="TextView"
-                android:textSize="18sp"
+                android:textColor="@color/text_blue"
+                android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintHorizontal_bias="0.203"
                 app:layout_constraintStart_toEndOf="@+id/profile_img"
                 app:layout_constraintTop_toTopOf="parent" />
 

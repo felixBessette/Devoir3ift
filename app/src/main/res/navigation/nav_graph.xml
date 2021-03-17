@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/navigation_saved"
         android:name="com.example.devoir3.favori_section.Favori"
-        tools:layout="@layout/favori" >
+        tools:layout="@layout/liste" >
         <action
             android:id="@+id/action_navigation_saved_to_viewProfileFragment"
             app:destination="@id/viewProfileFragment" />
@@ -30,7 +30,7 @@
     <fragment
         android:id="@+id/navigation_messages"
         android:name="com.example.devoir3.messages_section.Messages"
-        tools:layout="@layout/messages" >
+        tools:layout="@layout/liste" >
         <action
             android:id="@+id/action_navigation_messages_to_conversation"
             app:destination="@id/conversation" />
@@ -38,7 +38,7 @@
     <fragment
         android:id="@+id/resultFragment"
         android:name="com.example.devoir3.recherche_section.ResultRecherche"
-        tools:layout="@layout/search_result">
+        tools:layout="@layout/liste">
         <argument
             android:name="message"
             app:argType="string"
@@ -62,7 +62,7 @@
     <fragment
         android:id="@+id/navigation_notif"
         android:name="com.example.devoir3.notif_section.Notif"
-        tools:layout="@layout/notif">
+        tools:layout="@layout/liste">
         <action
             android:id="@+id/action_navigation_notif_to_viewProfileFragment"
             app:destination="@id/viewProfileFragment" />
@@ -93,7 +93,7 @@
     <fragment
         android:id="@+id/contact2"
         android:name="com.example.devoir3.profile_section.Contact"
-        tools:layout="@layout/contact">
+        tools:layout="@layout/liste">
         <action
             android:id="@+id/action_contact2_to_viewProfileFragment"
             app:destination="@id/viewProfileFragment" />
@@ -103,13 +103,4 @@
         android:name="com.example.devoir3.profile_section.PersonnaliserProfile"
         android:label="personnaliser__profile"
         tools:layout="@layout/personnaliser_profile" />
-    <fragment
-        android:id="@+id/blankFragment"
-        android:name="com.example.devoir3.BlankFragment"
-        android:label="fragment_blank"
-        tools:layout="@layout/fragment_blank" >
-        <action
-            android:id="@+id/action_blankFragment_to_navigation_profil"
-            app:destination="@id/navigation_profil" />
-    </fragment>
 </navigation>

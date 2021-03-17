@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.devoir3.ListAdapter;
 import com.example.devoir3.R;
@@ -35,8 +36,10 @@ public class Contact extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.contact, container, false);
-        recyclerView = root.findViewById(R.id.contact_recycler);
+        View root = inflater.inflate(R.layout.liste, container, false);
+        recyclerView = root.findViewById(R.id.favori_recycler);
+        TextView title = root.findViewById(R.id.page_title);
+        title.setText(R.string.contact);
         int ids = R.layout.row_contacts;
         LinearLayoutManager linearLayoutManager = new  LinearLayoutManager(getContext());
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);

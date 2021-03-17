@@ -10,27 +10,15 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/favori_recycler"
         android:layout_width="match_parent"
-        android:layout_height="506dp"
-        android:layout_below="@+id/search_bar"
+        android:layout_height="560dp"
+        android:layout_below="@id/header"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="0dp" />
-
-
-    <SearchView
-        android:id="@+id/search_bar"
-        style="@android:style/Widget.Material.Light.SearchView"
-        android:layout_width="376dp"
-        android:layout_height="42dp"
-        android:layout_below="@+id/header"
-        android:layout_alignParentStart="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/border"
-        android:contentDescription="@string/accept" />
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="3dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header"
@@ -39,7 +27,7 @@
         android:background="@color/blue_main">
 
         <TextView
-            android:id="@+id/titre"
+            android:id="@+id/page_title"
             android:layout_width="243dp"
             android:layout_height="49dp"
             android:text="@string/fav"
@@ -52,6 +40,28 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/search_border"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <SearchView
+            android:id="@+id/search_bar"
+            style="@android:style/Widget.Material.Light.SearchView"
+            android:layout_width="355dp"
+            android:layout_height="37dp"
+            android:background="@drawable/search_border"
+            android:contentDescription="@string/accept"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.cardview.widget.CardView>
 </RelativeLayout>
 
 

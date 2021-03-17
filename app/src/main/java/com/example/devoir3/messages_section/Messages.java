@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -21,8 +22,10 @@ public class Messages extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.messages, container, false);
-        recyclerView = root.findViewById(R.id.recycler_message);
+        View root = inflater.inflate(R.layout.liste, container, false);
+        recyclerView = root.findViewById(R.id.favori_recycler);
+        TextView title = root.findViewById(R.id.page_title);
+        title.setText(R.string.rech_message);
         int ids = R.layout.row_messages;
         LinearLayoutManager linearLayoutManager = new  LinearLayoutManager(getContext());
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);

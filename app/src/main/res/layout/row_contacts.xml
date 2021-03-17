@@ -25,13 +25,14 @@
                 android:layout_height="41dp"
                 android:layout_marginTop="4dp"
                 android:text="TextView"
-                android:textSize="18sp"
+                android:textColor="@color/text_blue"
+                android:textSize="30sp"
                 app:layout_constraintBottom_toTopOf="@+id/profile_button"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintHorizontal_bias="0.101"
                 app:layout_constraintStart_toEndOf="@+id/profile_img"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.272" />
+                app:layout_constraintVertical_bias="0.578" />
 
             <ImageView
                 android:id="@+id/profile_img"
@@ -51,38 +52,42 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TextView"
+                android:textColor="@color/text_blue"
                 android:textSize="18sp"
+                android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.047"
+                app:layout_constraintHorizontal_bias="0.213"
                 app:layout_constraintStart_toEndOf="@+id/profile_img"
                 app:layout_constraintTop_toBottomOf="@+id/profile_text1"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.126" />
 
             <Button
                 android:id="@+id/profile_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:background="@color/blue_main"
+                android:layout_marginStart="60dp"
+                android:background="@drawable/top_bar"
                 android:text="@string/profile"
+                android:textColor="@color/text_blue"
+                android:textSize="18sp"
+                android:textStyle="normal|bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/likeButton"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.823" />
+                app:layout_constraintVertical_bias="0.734" />
 
             <ImageButton
                 android:id="@+id/likeButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:background="@drawable/ic_baseline_favorite_24"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="256dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/profile_img"
                 app:layout_constraintTop_toBottomOf="@+id/profile_text2"
-                app:layout_constraintVertical_bias="0.505"
+                app:layout_constraintVertical_bias="0.615"
                 app:srcCompat="@drawable/ic_baseline_favorite_24" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

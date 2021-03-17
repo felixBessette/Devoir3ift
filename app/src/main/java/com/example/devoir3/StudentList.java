@@ -17,9 +17,9 @@ public class StudentList {
         String[] interets = context.getResources().getStringArray(R.array.student_interet),
                 cours = context.getResources().getStringArray(R.array.student_cours),
                 clubs = context.getResources().getStringArray(R.array.student_clubs);
-        avatar = new int[]{R.drawable.avatar1, R.drawable.avatar2, R.drawable.avatar3, R.drawable.avatar7,
-                R.drawable.avatar8, R.drawable.avatar9, R.drawable.avatar10, R.drawable.avatar11, R.drawable.avatar12, R.drawable.avatar1, R.drawable.avatar2, R.drawable.avatar3, R.drawable.avatar7,
-                R.drawable.avatar8, R.drawable.avatar9, R.drawable.avatar10, R.drawable.avatar11, R.drawable.avatar12};
+        avatar = new int[]{R.drawable.avatar12, R.drawable.avatar2, R.drawable.avatar10, R.drawable.avatar7,
+                R.drawable.avatar3, R.drawable.avatar9, R.drawable.avatar10, R.drawable.avatar7, R.drawable.avatar12, R.drawable.avatar10, R.drawable.avatar2, R.drawable.avatar3, R.drawable.avatar7,
+                R.drawable.avatar2, R.drawable.avatar9, R.drawable.avatar10, R.drawable.avatar3, R.drawable.avatar12};
         for (int i = 0; i < 18; i ++) {
             int fav = Color.RED;
             String[] inter = new String[]{interets[i], cours[i], clubs[i]};

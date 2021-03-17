@@ -32,7 +32,7 @@ public class Favori extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.favori, container, false);
+        View root = inflater.inflate(R.layout.liste, container, false);
         recyclerView = root.findViewById(R.id.favori_recycler);
         int ids = R.layout.row_favori;
         LinearLayoutManager linearLayoutManager = new  LinearLayoutManager(getContext());

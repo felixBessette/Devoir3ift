@@ -47,10 +47,10 @@ public class ResultRecherche extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.search_result, container, false);
-        recyclerView = root.findViewById(R.id.recycler_view);
+        View root = inflater.inflate(R.layout.liste, container, false);
+        recyclerView = root.findViewById(R.id.favori_recycler);
         studentName = getResources().getStringArray(R.array.student_name);
-        criteria = root.findViewById(R.id.search_by);
+        criteria = root.findViewById(R.id.page_title);
         if (getArguments() != null) {
             ResultRechercheArgs args = ResultRechercheArgs.fromBundle(getArguments());
             String message = args.getMessage();
