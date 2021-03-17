@@ -45,7 +45,6 @@ public class ViewProfile extends Fragment {
                 clubs = root.findViewById(R.id.clubs_texte);
         ImageView profile_img = root.findViewById(R.id.profile_picture);
         ImageButton like = root.findViewById(R.id.view_prof_like), add_friend = root.findViewById(R.id.demande_ami_button);
-        boolean isClickable = true;
         if (getArguments() != null) {
             ViewProfileArgs args = ViewProfileArgs.fromBundle(getArguments());
             String[] info = args.getInfo();
@@ -119,6 +118,19 @@ public class ViewProfile extends Fragment {
             //Set the location of the window on the screen
             popupWindow.showAtLocation(root, Gravity.CENTER, 400, 400);
             ImageButton close = popupView.findViewById(R.id.share_close);
+            Button fb = popupView.findViewById(R.id.fb), twitter = popupView.findViewById(R.id.twitter),ig = popupView.findViewById(R.id.ig);
+            fb.setOnClickListener(v1 -> {
+                ImageView fb_img = popupView.findViewById(R.id.fb_img);
+                fb_img.setImageResource(R.drawable.friend_added);
+            });
+            twitter.setOnClickListener(v2 -> {
+                ImageView twitter_img = popupView.findViewById(R.id.twt_img);
+                twitter_img.setImageResource(R.drawable.friend_added);
+            });
+            ig.setOnClickListener(v3 -> {
+                ImageView ig_img = popupView.findViewById(R.id.ig_img);
+                ig_img.setImageResource(R.drawable.friend_added);
+            });
             close.setOnClickListener(u -> {
                 popupWindow.dismiss();
             });

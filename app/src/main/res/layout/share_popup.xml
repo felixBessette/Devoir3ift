@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/interest_splitter">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="301dp"
-        android:layout_height="472dp"
-        app:cardBackgroundColor="@color/blue_main"
-        app:cardCornerRadius="10dp"
+        android:layout_width="305dp"
+        android:layout_height="405dp"
+        app:cardBackgroundColor="@null"
+        app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,69 +18,147 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/popup_corner">
 
             <TextView
                 android:id="@+id/part"
-                android:layout_width="126dp"
-                android:layout_height="43dp"
+                android:layout_width="296dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/blue_main"
                 android:fontFamily="sans-serif-black"
+                android:paddingTop="10dp"
                 android:text="@string/partage"
+                android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="30sp"
-                app:layout_constraintBottom_toTopOf="@+id/twitter"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintHorizontal_bias="0.703"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.615" />
-
-            <Button
-                android:id="@+id/ig"
-                android:layout_width="190dp"
-                android:layout_height="44dp"
-                android:layout_marginBottom="44dp"
-                android:background="@android:color/transparent"
-                android:text="@string/ig"
-                app:layout_constraintBottom_toTopOf="@+id/fb"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.495"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <Button
-                android:id="@+id/fb"
-                android:layout_width="190dp"
-                android:layout_height="39dp"
-                android:layout_marginBottom="84dp"
-                android:background="@android:color/transparent"
-                android:text="@string/fb"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.495"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <Button
-                android:id="@+id/twitter"
-                android:layout_width="194dp"
-                android:layout_height="40dp"
-                android:layout_marginBottom="44dp"
-                android:background="@android:color/transparent"
-                android:text="@string/tw"
-                app:layout_constraintBottom_toTopOf="@+id/ig"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.56"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
                 android:id="@+id/share_close"
-                android:layout_width="60dp"
-                android:layout_height="50dp"
-                android:background="@android:color/transparent"
+                android:layout_width="64dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/top_bar"
+                android:backgroundTint="@color/blue_main"
                 android:scaleType="fitCenter"
                 android:tint="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_baseline_close_24" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="266dp"
+                android:layout_height="74dp"
+                android:background="@drawable/border"
+                android:orientation="horizontal"
+                android:paddingStart="55dp"
+                android:paddingTop="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.487"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+                app:layout_constraintVertical_bias="0.373">
+
+                <Button
+                    android:id="@+id/twitter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginBottom="48dp"
+                    android:background="@android:color/transparent"
+                    android:paddingEnd="30dp"
+                    android:text="@string/tw"
+                    android:textAlignment="center"
+                    android:textColor="@color/blue_main"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/twt_img"
+                    android:layout_width="46dp"
+                    android:layout_height="41dp"
+                    android:layout_marginEnd="160dp"
+                    app:srcCompat="@drawable/twitter" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="266dp"
+                android:layout_height="70dp"
+                android:background="@drawable/border"
+                android:orientation="horizontal"
+                android:paddingStart="40dp"
+                android:paddingTop="15dp"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.487"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/part"
+                app:layout_constraintVertical_bias="0.756">
+
+                <Button
+                    android:id="@+id/ig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_marginBottom="44dp"
+                    android:background="@android:color/transparent"
+                    android:paddingEnd="10dp"
+                    android:text="@string/ig"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/ig_img"
+                    android:layout_width="46dp"
+                    android:layout_height="41dp"
+                    android:layout_marginEnd="44dp"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/ig" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="266dp"
+                android:layout_height="74dp"
+                android:background="@drawable/border"
+                android:orientation="horizontal"
+                android:paddingStart="48dp"
+                android:paddingTop="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.487"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.574">
+
+                <Button
+                    android:id="@+id/fb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:background="@android:color/transparent"
+                    android:paddingEnd="18dp"
+                    android:text="@string/fb"
+                    android:textColor="#0D47A1"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/fb_img"
+                    android:layout_width="46dp"
+                    android:layout_height="41dp"
+                    android:layout_marginEnd="40dp"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/fb" />
+
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
