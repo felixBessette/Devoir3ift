@@ -2,7 +2,7 @@
     <string name="app_name">Devoir3</string>
     <string name="title_activity_navigation">MainActivity</string>
     <string name="title_home">Recherche</string>
-    <string name="title_dashboard">Saved</string>
+    <string name="title_dashboard">Favoris</string>
     <string name="title_notifications">Messages</string>
 
 
