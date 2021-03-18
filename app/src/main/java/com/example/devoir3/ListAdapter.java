@@ -98,7 +98,12 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         holder.profileName.setTag(studentIds.get(position));
         if (id != R.layout.row_messages && id != R.layout.row_convo && id != R.layout.row_notif) {
             holder.likeButton.setColorFilter(student.like);
-            holder.profileDescrip.setText(interet);
+            if (id == R.layout.row_result) {
+                holder.profileDescrip.setText(interet);
+            }
+            else {
+                holder.profileDescrip.setText(student.etude);
+            }
         }
     }
 

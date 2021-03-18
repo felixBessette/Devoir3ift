@@ -14,6 +14,7 @@ public class StudentList {
     public ArrayList<Student> initialiseStudentList() {
         ArrayList<Student> studentList = new ArrayList<>();
         String[] names = context.getResources().getStringArray(R.array.student_name);
+        String[] etudes = context.getResources().getStringArray(R.array.student_etude);
         String[] interets = context.getResources().getStringArray(R.array.student_interet),
                 cours = context.getResources().getStringArray(R.array.student_cours),
                 clubs = context.getResources().getStringArray(R.array.student_clubs);
@@ -40,7 +41,7 @@ public class StudentList {
                 status = 2;
                 fav = Color.LTGRAY;
             }
-            Student student = new Student(names[i], avatar[i], fav, inter, status);
+            Student student = new Student(names[i], avatar[i], fav, inter, status, etudes[i]);
             studentList.add(student);
         }
         return studentList;
@@ -52,12 +53,14 @@ public class StudentList {
         int like;
         String[] interet;
         int relation;
-        public Student(String n, int p, int l, String[] i, int r) {
+        String etude;
+        public Student(String n, int p, int l, String[] i, int r, String e) {
             name = n;
             picture = p;
             like = l;
             interet = i;
             relation = r;
+            etude = e;
         }
         public void acceptRequest() {
             this.like = Color.BLACK;

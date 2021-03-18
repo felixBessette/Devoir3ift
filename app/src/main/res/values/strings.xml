@@ -94,6 +94,26 @@
         <item>Bowling, Football, Soccer</item>
         <item>Info, Science, Golf</item>
     </string-array>
+    <string-array name="student_etude">
+        <item>Étudiant Info</item>
+        <item>Étudiant Math</item>
+        <item>Étudiant Bio</item>
+        <item>Étudiant Psycho</item>
+        <item>Étudiant Enseignement</item>
+        <item>Étudiant Stats</item>
+        <item>Étudiant Médecine</item>
+        <item>Étudiant Chimie</item>
+        <item>Étudiant Admin</item>
+        <item>Étudiant Marketing</item>
+        <item>Étudiant Économie</item>
+        <item>Étudiant Écologie</item>
+        <item>Étudiant Langues</item>
+        <item>Étudiant Communication</item>
+        <item>Étudiant Comptabilité</item>
+        <item>Étudiant Finance</item>
+        <item>Étudiant Construction</item>
+        <item>Étudiant Politique</item>
+    </string-array>
 
     <string-array name="student_cours">
         <item>IFT2905, IFT2245, PHY101, IFT1575</item>
